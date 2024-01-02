@@ -4,4 +4,5 @@ argument and returns their sum as a float."""
 
 
 def sum_list(input_list: list) -> float:
+    """Adds all elements of a list and return a float"""
     return sum(input_list)
