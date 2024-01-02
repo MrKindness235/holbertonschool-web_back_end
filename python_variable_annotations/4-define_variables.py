@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+"""Annotations practice."""
+
 
 a: int = 1
 pi: float = 3.14
