@@ -7,8 +7,8 @@ The second element is the square of the
 int/float v and should be annotated as a float.
 """
 
-from typing import List, Union
+from typing import List, Tuple, Union
 
 
-def to_kv(k: str, v: int or float) -> tuple:
-    return tuple(k, float(v * v))
+def to_kv(k: str, v: int or float) -> Tuple[str, float]:
+    return {k, float(v * v)}
