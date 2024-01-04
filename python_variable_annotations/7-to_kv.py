@@ -12,4 +12,4 @@ from typing import Tuple, Union
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
     """Tuple of k and v to the power of 2."""
-    return {k, v ** 2}
+    return (k, v ** 2)
