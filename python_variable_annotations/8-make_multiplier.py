@@ -10,4 +10,4 @@ def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Such a novel concept! A function inside a function!"""
     def carlos(x: float) -> float:
         return x * multiplier
-    return carlos(multiplier)
+    return carlos
