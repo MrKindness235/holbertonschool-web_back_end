@@ -7,11 +7,18 @@ import pymongo
 from pymongo import MongoClient
 
 
-from pymongo import MongoClient
-# intance mongo - Local host
-client = MongoClient("mongodb://localhost:27017/")
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    log_collection = client.logs.nginx
 
-database = client.logs
-collection = database.nginx
-count_document = collection.count_documents({})
-print(f"{count_document} logs")
+    method = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+
+    print("{} logs".format(log_collection.count_documents({})))
+    print("Methods:")
+
+    for m in method:
+        print('\tmethod {}: {}'.format(
+            m, log_collection.count_documents({"method": m})))
+
+    print("{} status check".format(log_collection.count_documents(
+        {"method": "GET", "path": "/status"})))
