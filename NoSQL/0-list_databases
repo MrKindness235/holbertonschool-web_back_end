@@ -1,2 +1,3 @@
-// First monogodb script
+// Lists all databases
+
 show dbs
