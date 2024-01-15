@@ -1,47 +1,47 @@
 export default class HolbertonCourse {
-    constructor(name, length, students) {
-      if (typeof name !== 'string') throw TypeError('Name must be a string');
-      if (typeof length !== 'number') throw TypeError('Length must be a number');
-      if (!Array.isArray(students)) throw TypeError('Students must be an array');
-      this._name = name;
-      this._length = length;
-      this._students = students;
-    }
-  
+  constructor(name, length, students) {
+    if (typeof name !== 'string') throw TypeError('Name must be a string');
+    if (typeof length !== 'number') throw TypeError('Length must be a number');
+    if (!Array.isArray(students)) throw TypeError('Students must be an array');
+    this._name = name;
+    this._length = length;
+    this._students = students;
+  }
+
     // Getter
-    get name() {
-      return this._name;
-    }
-    // Getter
-  
-    get lenght() {
-      return this._length;
-    }
+  get name() {
+    return this._name;
+  }
     // Getter
   
-    get students() {
-      return this._students;
-    }
-  
+  get lenght() {
+    return this._length;
+  }
+    // Getter
+
+  get students() {
+    return this._students;
+  }
+
     // Setter
-    set name(newName) {
-      if (typeof newName !== 'string') {
-        throw TypeError('Name must be a string');
-      }
-      this._name = newName;
+  set name(newName) {
+    if (typeof newName !== 'string') {
+      throw TypeError('Name must be a string');
     }
-  
-    set length(lenNum) {
-      if (typeof lenNum !== 'number') {
-        throw TypeError('Length must be a number');
-      }
-      this._length = lenNum;
+    this._name = newName;
+  }
+
+  set length(lenNum) {
+    if (typeof lenNum !== 'number') {
+      throw TypeError('Length must be a number');
     }
-  
-    set students(studentsNum) {
-      if (!Array.isArray(studentsNum)) {
-        throw new TypeError('Students must be an array');
-      }
-      this._students = studentsNum;
+    this._length = lenNum;
+  }
+
+  set students(studentsNum) {
+    if (!Array.isArray(studentsNum)) {
+      throw new TypeError('Students must be an array');
     }
+    this._students = studentsNum;
+  }
 }
