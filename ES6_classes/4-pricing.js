@@ -5,7 +5,7 @@ export default class Pricing {
     this._currency = currency;
   }
 
-    // Getter
+  // Getter
 
   get amaunt() {
     return this._amount;
@@ -15,7 +15,7 @@ export default class Pricing {
     return this._currency;
   }
 
-    // Setters
+  // Setters
 
   setAmount(newAmount) {
     if (typeof newAmount !== 'number') throw TypeError('Amount must be a number');

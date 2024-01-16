@@ -7,13 +7,13 @@ export default class Building {
     this._sqft = sqft;
   }
 
-    // Getter
+  // Getter
 
   get sqft() {
     return this._sqft;
   }
 
-    // Setter
+  // Setter
 
   set sqft(newSqft) {
     if (typeof newSqft !== 'number') throw TypeError('Sqft must be a number');
