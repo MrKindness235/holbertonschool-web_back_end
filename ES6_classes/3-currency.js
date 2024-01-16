@@ -4,7 +4,7 @@ export default class Currency {
     this._name = name;
   }
 
-    // Getter
+  // Getter
 
   get code() {
     return this._code;

@@ -8,22 +8,22 @@ export default class HolbertonCourse {
     this._students = students;
   }
 
-    // Getter
+  // Getter
   get name() {
     return this._name;
   }
-    // Getter
+  // Getter
   
   get lenght() {
     return this._length;
   }
-    // Getter
+  // Getter
 
   get students() {
     return this._students;
   }
 
-    // Setter
+  // Setter
   set name(newName) {
     if (typeof newName !== 'string') {
       throw TypeError('Name must be a string');
