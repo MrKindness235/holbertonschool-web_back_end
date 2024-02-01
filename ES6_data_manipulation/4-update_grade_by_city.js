@@ -1,6 +1,6 @@
 export default function updateStudentGradeByCity(getListStudents, city, newGrades) {
   const listByCity = getListStudents.filter((student) => student.location === city);
-  
+
   let stuGrade = 'N/A';
   const result = listByCity.map((obj) => {
     if (newGrades.some((s) => s.studentId === obj.id)) {
@@ -17,6 +17,6 @@ export default function updateStudentGradeByCity(getListStudents, city, newGrade
       grade: typeof stuGrade === 'object' ? stuGrade.grade : 'N/A',
     });
   });
-  
+
   return result;
 }
